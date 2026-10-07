@@ -11,7 +11,12 @@
 #   Print dan: "Je bent nog geen 18."
 #
 # Test je programma daarna met verschillende waardes voor age.
+leeftijd = 18
+if leeftijd >= 18:
+    print ("je bent volwassen")
 
+else:  
+    print("je bent nog geen 18")
 
 
 # Opdracht 2 - Voldoende of onvoldoende
@@ -29,7 +34,14 @@
 #
 # Test je programma met verschillende cijfers.
 
+grade = 4
+if grade >= 5.5:
+    print("je hebt voldoende")
+else:
+    print("je hebt geen voldoende")
 
+
+    
 
 # Opdracht 3 - Cijfer beoordelen
 #
@@ -50,7 +62,16 @@
 # 4
 # 6
 # 9
+grade = 7
+if grade >= 7:
+    print("goed gedaan")
+elif grade >= 5.5:
+    print("je hebt voldoende") 
+else:
+    print("je hebt onvoeldoende")
+ 
 
+    
 
 
 # Opdracht 4 - Game Character
@@ -72,8 +93,18 @@
 #
 # Als dit zo is:
 # Print "Je hebt een schild!"
+health = 75
+has_shield = True
 
+if health >= 50:
+    print("je hebt genoeg health")
+else:
+    print("je hebt weinig health")
 
+if has_shield is True:
+    print("je hebt shield")
+else:
+    print("je hebt geen shield")
 
 # Opdracht 5 - Mag je naar binnen?
 #
@@ -96,6 +127,13 @@
 # Print "Je mag niet naar binnen."
 #
 # Test daarna wat er gebeurt als je de waardes verandert.
+age = 20
+has_ticket = True
+
+if age >= 18 and has_ticket == True:
+    print("Je mag naar binnen!")
+else:
+    print("Je mag niet naar binnen.")
 
 
 
@@ -114,6 +152,9 @@
 #
 # Gebruik hiervoor range().
 
+for getal in range (1, 11):
+    print (getal)
+
 
 
 # Opdracht 7 - Tafel van 5
@@ -130,7 +171,8 @@
 #
 # Gebruik de variabele uit je for-loop
 # om de berekening te maken.
-
+for getal in range(1, 11):
+    print (getal, "x 5 =", getal * 5)
 
 
 # Opdracht 8 - Countdown
@@ -157,6 +199,12 @@
 # 2
 # 1
 # GO!
+countdown = 10
+while countdown >= 1:
+    print(countdown)
+    countdown = countdown -1
+
+print("go!")
 
 
 
@@ -179,6 +227,12 @@
 # Health: 40
 # Health: 20
 # Health: 0
+health = 100
+
+for i in range(5):
+    health = health -20
+    print ("health:", health)
+
 
 
 
@@ -203,6 +257,12 @@
 #
 # Bijvoorbeeld:
 # 4 % 2 == 0
+for getal in range(1, 11):
+    if getal % 2 == 0:
+        print(getal, "is even")
+    else:
+        print(getal, "is oneven")
+
 
 
 
@@ -228,7 +288,17 @@
 # Print "Vijand verslagen!"
 #
 # Daarna begint de volgende vijand.
+for vijand in range(1, 6):
+    enemy_health = 30
 
+    print("Vijand", vijand)
+
+    while enemy_health > 0:
+        enemy_health = enemy_health - 10
+        print("Health:", enemy_health)
+
+    print("Vijand verslagen!")
+    print()
 
 
 # Eindopdracht - Player Training - BONUS
@@ -262,6 +332,22 @@
 # "Training voltooid!"
 # "Level: ..."
 # "Experience: ..."
+player_name = "Steve"
+level = 1
+experience = 0
+
+for training in range(10):
+    experience = experience + 20
+    print(player_name, "heeft nu", experience, "experience.")
+
+    if experience >= 100:
+        level = level + 1
+        print("LEVEL UP!")
+        experience = 0
+
+print("Training voltooid!")
+print("Level:", level)
+print("Experience:", experience)
 #
 #
 # BONUS:
